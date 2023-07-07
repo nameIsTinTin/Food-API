@@ -66,9 +66,16 @@ async function fetchRecipes(apiKey) {
     const recipes = data.results.forEach(element => {
         console.log(element);
 
-        
+        var foodURL = `https://spoonacular.com/recipes/${element.title.replace(/ /g, "-")}-${element.id}`
+        var foodTitle = document.createElement("a"); 
+        var foodDisplay = document.createElement("h3");
+        foodTitle.href = foodURL; 
+        foodTitle.textContent = element.title; 
+
+        foodDisplay.appendChild(foodTitle);
+        foodArray.appendChild(foodDisplay);
+
         foodArray.innerHTML += `<img src="${element.image}">`;
-        foodArray.innerHTML += `<h3>${element.title}</h3>`;
     });
     
   } catch (error) {
