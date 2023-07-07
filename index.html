@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="container">
+
+        <div id="foodSelectionContainer">
+            <h1>Food Selector</h1>
+            
+            <label for="query">Query:</label>
+            <input type="text" id="query" class="textBox" query="Include" placeholder="Pasta, Pizza, etc..">
+
+            <label for="includeIngredients">Include these Ingredients:</label>
+            <input type="text" id="includeIngredients" class="textBox" query="Include" placeholder="Chicken, Broccoli, Peanut Butter, etc..">
+
+            <label for="excludeIngredients">Exclude these Ingredients:</label>
+            <input type="text" id="excludeIngredients" class="textBox" query="Exclude" placeholder="Chicken, Broccoli, Peanut Butter, etc..">
+
+        </div>
+
+        <div id="foodArrayContainer">
+            <h1>Food List</h1>
+            <p id="foodArray"></p>
+        </div>
+
+    </div>
+    
+    <button id="searchButton">Get Food List</button>
+    
+    <script src="index.js"></script>
+</body>
+</html>
